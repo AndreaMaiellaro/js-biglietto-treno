@@ -18,13 +18,15 @@ console.log(percent)
 
 if ( 18 > etaPersona ) {
     var percent = ( prezzoKm *  20 ) / 100;
-    var prezzoBiglietto = prezzoKm - percent;
+    var prezzoBiglietto = parseFloat(prezzoKm - percent).toFixed(2);
 } else if ( etaPersona > 65 ) {
     var percent = ( prezzoKm *  40 ) / 100;
-    var prezzoBiglietto = prezzoKm - percent;
+    var prezzoBiglietto = parseFloat(prezzoKm - percent).toFixed(2);
 } else {
-    var prezzoBiglietto = prezzoKm;
+    var prezzoBiglietto = parseFloat(prezzoKm).toFixed(2);
 }
+
+//parseFloat(num).toFixed(2);
 
 
 //mostrare le variabili
