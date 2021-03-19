@@ -1,33 +1,27 @@
 // chiedere km
 var kmPercorrere = prompt('Dimmi i km che devi percorrere');
 console.log(kmPercorrere);
+kmPercorrere = parseFloat(kmPercorrere);
 
 //chiedere eta
 var etaPersona = prompt('Dimmi la tua età');
 console.log(etaPersona);
 
 //prezzo biglietto
-var prezzoKm = ( kmPercorrere *  0.21 )
-console.log(prezzoKm)
-
-var prezzoBiglietto;
-console.log(prezzoBiglietto)
+var prezzoBiglietto = kmPercorrere * 0.21; 
+console.log(prezzoBiglietto);
 
 var percent;
-console.log(percent)
+console.log(percent);
 
-if ( 18 > etaPersona ) {
-    var percent = ( prezzoKm *  20 ) / 100;
-    var prezzoBiglietto = parseFloat(prezzoKm - percent).toFixed(2);
+if ( etaPersona < 18 ) {
+    percent = ( prezzoBiglietto *  20 ) / 100;
+    prezzoBiglietto = prezzoBiglietto - percent;
 } else if ( etaPersona > 65 ) {
-    var percent = ( prezzoKm *  40 ) / 100;
-    var prezzoBiglietto = parseFloat(prezzoKm - percent).toFixed(2);
-} else {
-    var prezzoBiglietto = parseFloat(prezzoKm).toFixed(2);
+    percent = ( prezzoBiglietto *  40 ) / 100;
+    prezzoBiglietto = prezzoBiglietto - percent;
 }
-
-//parseFloat(num).toFixed(2);
 
 
 //mostrare le variabili
-document.getElementById('prezzo').innerHTML = prezzoBiglietto;
+document.getElementById('prezzo').innerHTML = prezzoBiglietto.toFixed(2);

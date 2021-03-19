@@ -1,8 +1,17 @@
 body {
-    background-color: rgb(216, 172, 89);
+    background-color: skyblue;
 }
 
 h1 {
-    color: teal;
-    background-color: palevioletred;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#prezzo {
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
 }
